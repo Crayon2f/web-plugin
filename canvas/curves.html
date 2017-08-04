@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>HTML5 Canvas腾讯AlloyTeam魔幻线条框架|curves_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<style type="text/css">
+		body {
+	            background-color: #1e1d23;
+	            /*opacity: 0;*/
+	            display: -webkit-box;
+	            display: -ms-flexbox;
+	            display: flex;
+	            -webkit-box-orient: vertical;
+	            -webkit-box-direction: normal;
+	            -ms-flex-direction: column;
+	            flex-direction: column;
+	            -webkit-box-pack: center;
+	            -ms-flex-pack: center;
+	            justify-content: center;
+	            text-transform: uppercase;
+	            font-size: 12px;
+	            letter-spacing: 2px;
+	            -webkit-tap-highlight-color: rgba(0,0,0,0);
+	            -webkit-user-select: none;
+	            -moz-user-select: none;
+	            -ms-user-select: none;
+	            user-select: none;
+	        }
+
+	        /*body.ready { opacity: 1; }*/
+
+
+	        .icon-text path,
+	        .icon-text polygon {
+	            /*opacity: 0;*/
+	        }
+
+	        .info {
+	            text-align: center;
+	        }
+
+	        .description {
+	            /*opacity: 0;*/
+	            color: white;
+	            margin-top: -20px;
+	        }
+
+	        .links {
+	            display: -webkit-box;
+	            display: -ms-flexbox;
+	            display: flex;
+	            -webkit-box-orient: vertical;
+	            -webkit-box-direction: normal;
+	            -ms-flex-direction: column;
+	            flex-direction: column;
+	            -webkit-box-pack: center;
+	            -ms-flex-pack: center;
+	            justify-content: center;
+	            -webkit-box-align: center;
+	            -ms-flex-align: center;
+	            align-items: center;
+	            margin-top: 20px;
+	        }
+
+	        @media (min-width: 700px) {
+	            .links {
+	                -webkit-box-orient: horizontal;
+	                -webkit-box-direction: normal;
+	                -ms-flex-direction: row;
+	                flex-direction: row;
+
+	            }
+	        }
+
+	        #container{
+	            margin:100px auto;
+	        }
+
+	        @media only screen and (max-width: 500px) {
+	            #container canvas{
+	               width: 100%;
+	            }
+	        }
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>HTML5 Canvas腾讯AlloyTeam魔幻线条框架 <span>Made curve a dancer in HTML5 canvas</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/html5/html5-canvas/201705014485.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">DEMO</a>
+			  <a href="curves.html">curves</a>
+			  <a href="noise.html" class="current">noise</a>
+			  <a href="noise-motion.html">noise-motion</a>
+			  <a href="points-to.html">points-to</a>
+			  <a href="scale-to.html">scale-to</a>
+			  <a href="siri-wave.html">siri-wave</a>
+			  <a href="smooth.html">smooth</a>
+			  <a href="sprout.html">sprout</a>
+			  <a href="tfc.html">tfc</a>
+			  <a href="water.html">water</a>
+			  <a href="word.html">word</a>
+			</div>
+		</header>
+	</div>
+	<div id="container"><canvas id="myCanvas" width="787" height="794" style="background-color: black;"></canvas></div>
+
+	<script src="example/curves/main.js"></script>
+</body>
+</html>
