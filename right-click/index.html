@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>右键菜单</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.6/css/bootstrap.min.css" />
+	<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="src/jquery.contextify.js"></script>
+	<!--[if IE]>
+		<script src="http://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="body" style="position:absolute;top:0px;left:0px;right:0px;bottom:0px">
+		使用右键点击空白区域
+	</div>
+	<script>
+		var options = {items:[
+		  {header: '功能'},
+		  {divider: true},
+		  {text: '第一个链接', href: 'http://www.jq22.com'},
+		  {text: '第二个链接', onclick: function() {alert("你点击了第2个链接")}},
+		  {text: '第三个链接', onclick: function() {alert("你点击了第3个链接")}},
+		  {text: '第四个链接', onclick: function() {alert("你点击了第4个链接")}}
+		]};
+		$('#body').contextify(options);
+	</script>
+</body>
+</html>
