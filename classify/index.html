@@ -1,130 +1,154 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>jquery和CSS3图片排序过滤搜索插件</title>
-	
-	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" type="text/css" href="css/demo.css">
-	<link rel="stylesheet" href="css/index.css">
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>-->
-	<!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-	<![endif]-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery和CSS3图片排序过滤搜索插件</title>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <![endif]-->
 </head>
 <body>
-	
-	<div class="container" style="background: #fff;padding: 2em;">
-		<!-- Filter Controls - Simple Mode -->
-		<div class="row">
-			<!-- A basic setup of simple mode filter controls, all you have to do is use data-filter="all"
-			for an unfiltered gallery and then the values of your categories to filter between them -->
-			<ul class="simplefilter">
-				简单过滤器控件：
-				<li class="active" data-filter="all">全部</li>
-				<li data-filter="1">城市</li>
-				<li data-filter="2">乡村</li>
-				<li data-filter="3">工业</li>
-				<li data-filter="4">日光</li>
-				<li data-filter="5">夜景</li>
-			</ul>
-		</div>
 
-		<!-- Filter Controls - Multifilter Mode -->
-		<div class="row" style="display: none">
-			<!-- A basic setup of multifilter controls, when the user toggles a category
-			the corresponding items are rendered or hidden -->
-			<ul class="multifilter">
-				滤波器控制：
-				<li data-multifilter="1">城市</li>
-				<li data-multifilter="2">乡村</li>
-				<li data-multifilter="3">工业</li>
-			</ul>
-		</div>
+<div class="container" style="background: #fff;padding: 2em;">
+    <!-- Filter Controls - Simple Mode -->
+    <div class="row">
+        <!-- A basic setup of simple mode filter controls, all you have to do is use data-filter="all"
+        for an unfiltered gallery and then the values of your categories to filter between them -->
+        <ul class="simplefilter">
+            简单过滤器控件：
+            <li class="active" data-filter="all">全部</li>
+            <li data-filter="1">城市</li>
+            <li data-filter="2">乡村</li>
+            <li data-filter="3">工业</li>
+            <li data-filter="4">日光</li>
+            <li data-filter="5">夜景</li>
+        </ul>
+    </div>
+    <button id="sss">ssss</button>
+    <!--<div class="row">-->
+        <!--&lt;!&ndash; A basic setup of simple mode filter controls, all you have to do is use data-filter="all"-->
+        <!--for an unfiltered gallery and then the values of your categories to filter between them &ndash;&gt;-->
+        <!--<ul class="simplefilter">-->
+            <!--简单过滤器控件：-->
+            <!--&lt;!&ndash;<li class="active" data-filter="all">全部</li>&ndash;&gt;-->
+            <!--<li data-filter="1000">app1</li>-->
+            <!--<li data-filter="1001">app2</li>-->
+        <!--</ul>-->
+    <!--</div>-->
 
-		<!-- Shuffle & Sort Controls -->
-		<div class="row" style="display: none">
-			<ul class="sortandshuffle">
-				排序 &amp; 移动 控制:
-				<!-- Basic shuffle control -->
-				<li class="shuffle-btn" data-shuffle>Shuffle</li>
-				<!-- Basic sort controls consisting of asc/desc button and a select -->
-				<li class="sort-btn active" data-sortAsc>Asc</li>
-				<li class="sort-btn" data-sortDesc>Desc</li>
-				<select data-sortOrder>
-					<option value="domIndex">
-						Position
-					</option>
-					<option value="sortData">
-						Description
-					</option>
-				</select>
-			</ul>
-		</div>
+    <!-- Filter Controls - Multifilter Mode -->
+    <div class="row">
+        <!-- A basic setup of multifilter controls, when the user toggles a category
+        the corresponding items are rendered or hidden -->
+        <ul class="multifilter">
+            滤波器控制：
+            <li data-multifilter="1001">城市</li>
+            <!--<li data-multifilter="1000">乡村</li>-->
+            <!--<li data-multifilter="1001">工业</li>-->
+        </ul>
+    </div>
 
-		<!-- Search control -->
-		<div class="row search-row">
-			关键字搜索：
-			<input type="text" class="filtr-search" name="filtr-search" data-search>
-		</div>
+    <!-- Shuffle & Sort Controls -->
+    <div class="row">
+        <ul class="sortandshuffle">
+            排序 &amp; 移动 控制:
+            <!-- Basic shuffle control -->
+            <li class="shuffle-btn" data-shuffle>Shuffle</li>
+            <!-- Basic sort controls consisting of asc/desc button and a select -->
+            <li class="sort-btn active" data-sortAsc>Asc</li>
+            <li class="sort-btn" data-sortDesc>Desc</li>
+            <select data-sortOrder>
+                <option value="domIndex">
+                    Position
+                </option>
+                <option value="sortData">
+                    Description
+                </option>
+            </select>
+        </ul>
+    </div>
 
-		<div class="row">
-			<!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
-			attribute, which starts from the value 1 and goes up from there -->
-			<div class="filtr-container">
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="Busy streets">
-					<img class="img-responsive" src="img/city_1.jpg" alt="sample image">
-					<span class="item-desc">Busy Streets</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5" data-sort="Luminous night">
-					<img class="img-responsive" src="img/nature_2.jpg" alt="sample image">
-					<span class="item-desc">Luminous night</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
-					<img class="img-responsive" src="img/city_3.jpg" alt="sample image">
-					<span class="item-desc">city wonders</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production">
-					<img class="img-responsive" src="img/industrial_1.jpg" alt="sample image">
-					<span class="item-desc">in production</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site">
-					<img class="img-responsive" src="img/industrial_2.jpg" alt="sample image">
-					<span class="item-desc">industrial site</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
-					<img class="img-responsive" src="img/nature_1.jpg" alt="sample image">
-					<span class="item-desc">peaceful lake</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="City lights">
-					<img class="img-responsive" src="img/city_2.jpg" alt="sample image">
-					<span class="item-desc">city lights</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
-					<img class="img-responsive" src="img/nature_3.jpg" alt="sample image">
-					<span class="item-desc">dreamhouse</span>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines">
-					<img class="img-responsive" src="img/industrial_3.jpg" alt="sample image">
-					<span class="item-desc">restless machines</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-	<script src="js/jquery.filterizr.min.js"></script>
-	<script src="js/controls.js"></script>
-	<script type="text/javascript">
-	$(function() {
-		$('.filtr-container').filterizr();
-	});
-	</script>
-	
+    <!-- Search control -->
+    <div class="row search-row">
+        关键字搜索：
+        <input type="text" class="filtr-search" name="filtr-search" data-search>
+    </div>
+
+    <div class="row">
+        <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
+        attribute, which starts from the value 1 and goes up from there -->
+        <div class="filtr-container">
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5, 1000" data-sort="Busy streets">
+                <img class="img-responsive" src="img/city_1.jpg" alt="sample image">
+                <span class="item-desc">Busy Streets</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5, 1000" data-sort="Luminous night">
+                <img class="img-responsive" src="img/nature_2.jpg" alt="sample image">
+                <span class="item-desc">Luminous night</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4, 1001" data-sort="City wonders">
+                <img class="img-responsive" src="img/city_3.jpg" alt="sample image">
+                <span class="item-desc">city wonders</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 1001" data-sort="In production">
+                <img class="img-responsive" src="img/industrial_1.jpg" alt="sample image">
+                <span class="item-desc">in production</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4, 1000" data-sort="Industrial site">
+                <img class="img-responsive" src="img/industrial_2.jpg" alt="sample image">
+                <span class="item-desc">industrial site</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4, 1000" data-sort="Peaceful lake">
+                <img class="img-responsive" src="img/nature_1.jpg" alt="sample image">
+                <span class="item-desc">peaceful lake</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5, 1000" data-sort="City lights">
+                <img class="img-responsive" src="img/city_2.jpg" alt="sample image">
+                <span class="item-desc">city lights</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4, 1001" data-sort="Dreamhouse">
+                <img class="img-responsive" src="img/nature_3.jpg" alt="sample image">
+                <span class="item-desc">dreamhouse</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 1001" data-sort="Restless machines">
+                <img class="img-responsive" src="img/industrial_3.jpg" alt="sample image">
+                <span class="item-desc">restless machines</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.filterizr.js"></script>
+<script src="js/controls.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-container').filterizr(
+            {
+                callbacks: {
+
+                    onFilteringStart: function () {
+                        console.log('开始');
+                    },
+                    onFilteringEnd: function () {
+                        console.log('结束');
+                    }
+                },
+                layout:'sameHeight'
+            }
+        );
+    });
+</script>
+
 </body>
 </html>
